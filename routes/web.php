@@ -21,3 +21,7 @@ Route::get('/sum/{a}/{b}',[SumController::class,'sum']);
 Route::get('/bao/{name}/{id}',[SumController::class,'bao']);
 
 Route::get('/menu',[SumController::class,'menu']);
+
+Route::get('/class/create',[SumController::class,'create']);
+
+Route::post('/class/store',[SumController::class,'store'])->name('store-class');

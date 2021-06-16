@@ -24,6 +24,9 @@ class Receipt extends Migration
             $table->string('accountant');
             $table->string('payer');
             $table->date('date');
+            $table->string('class_bk');
+            $table->integer('countPay');
+            $table->string('method');
         });
     }
 

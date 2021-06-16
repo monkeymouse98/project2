@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SumController extends Controller
 {
@@ -24,6 +25,16 @@ class SumController extends Controller
         return view('menu',[
             "menu" => $ds,
             "url" => $url
+        ]);
+    }
+    public function create(){
+        return view('class.create');
+    }
+    public function store(Request $req){
+        $name = $req->get('name');
+        // echo $name;
+        DB::insert('INSERT INTO class2(name) value (?)', [
+            $name
         ]);
     }
 }

@@ -23,6 +23,8 @@ class Accountant extends Migration
             $table->boolean('gender');
             $table->date('dateBirth');
             $table->text('address');
+            $table->boolean('permission');
+            $table->boolean('block');
         });
     }
 
