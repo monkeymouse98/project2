@@ -1,6 +1,7 @@
 <?php
-use App\Http\controllers\SumController;
-use App\Http\Controllers\StudentController;
+
+use App\Http\Controllers\ComponentsController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/sinhvien/{name}',[StudentController::class,'index']);
-
-Route::get('/sum/{a}/{b}',[SumController::class,'sum']);
-
-Route::get('/bao/{name}/{id}',[SumController::class,'bao']);
-
-Route::get('/menu',[SumController::class,'menu']);
-
-Route::get('/class/create',[SumController::class,'create']);
-
-Route::post('/class/store',[SumController::class,'store'])->name('store-class');
+//dashboad
+Route::get('/', function () {
+    return view('dashboard');
+});
+//components
+Route::get('buttons', [ComponentsController::class, 'buttons']);
+Route::get('grid', [ComponentsController::class, 'grid']);
