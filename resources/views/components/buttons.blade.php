@@ -11,7 +11,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="header">
-                                        <h4 class="title">DColors</h4>
+                                        <h4 class="title">Colors</h4>
                                     </div>
                                     <div class="content">
                                         <button class="btn btn-default btn-fill btn-wd">Default</button>
